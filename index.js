@@ -1,4 +1,5 @@
 const express = require('express');
+const port = process.env.PORT || 4007;
 const app = express();
 
 var bodyParser = require('body-parser');
@@ -71,7 +72,7 @@ app.get('/getquiz/:mtype',function(req,resp,next){
 
 
 
-app.listen(4008,(err)=>{
+app.listen(port,(err)=>{
     if(err){
         console.log("Error"+err);
         return false;
